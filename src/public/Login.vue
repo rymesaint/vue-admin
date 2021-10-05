@@ -31,6 +31,7 @@ export default {
             const response = await axios.post('/login', {
                 email: email.value,
                 password: password.value,
+                scope: 'admin'
             });
 
             localStorage.setItem('token', response.data.token);
